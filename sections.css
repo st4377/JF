@@ -160,10 +160,7 @@
   padding: 80px 40px;
 }
 .highlight-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3C/g%3E%3C/svg%3E");
+  display: none;
 }
 .highlight-inner {
   max-width: 1200px;
@@ -282,10 +279,7 @@
   overflow: hidden;
 }
 .tejaswini-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 70% 50%, rgba(255, 200, 100, 0.15), transparent 60%);
+  display: none;
 }
 .tejaswini-inner {
   max-width: 1200px;

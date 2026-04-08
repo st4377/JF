@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Jagathi Foundation</title>
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="sections.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+  <style>
+    body {
+      background: #f9f7f3;
+      font-family: 'DM Sans', Arial, sans-serif;
+      margin: 0;
+      color: #1a2a32;
+    }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 18px 32px 12px 32px;
+      font-size: 1.05rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #0d4f5c;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #bfa14a;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 32px rgba(13,79,92,0.07);
+      padding: 36px 32px 32px 32px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem;
+      color: #0d4f5c;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e6e2d8;
+      padding: 0 0 12px 0;
+    }
+    .faq-question {
+      font-size: 1.13rem;
+      font-weight: 700;
+      color: #0d4f5c;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: color 0.2s;
+    }
+    .faq-question:hover {
+      color: #bfa14a;
+    }
+    .faq-answer {
+      font-size: 1rem;
+      color: #333;
+      margin-top: 6px;
+      display: none;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+      animation: fadeIn 0.4s;
+    }
+    .faq-toggle {
+      font-size: 1.3rem;
+      color: #bfa14a;
+      margin-left: 12px;
+      transition: transform 0.2s;
+    }
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      main { padding: 18px 6vw; }
+      nav { padding: 12px 4vw 8px 4vw; }
+    }
+  </style>
+<body>
+  <nav>
+    <a href="index.html">Home</a> &gt; FAQ
+  </nav>
+  <main>
+    <h1>FAQ</h1>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">What is Jagathi Foundation?<span class="faq-toggle">+</span></div>
+        <div class="faq-answer">Jagathi Foundation is a registered non-profit organization established in 2020, dedicated to empowering underserved communities through education, health awareness, women empowerment, environmental action, and sustainable livelihoods.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Where does Jagathi Foundation operate?<span class="faq-toggle">+</span></div>
+        <div class="faq-answer">We currently work across eight Indian states, including Telangana, Andhra Pradesh, Karnataka, Tamil Nadu, Puducherry, Himachal Pradesh, Madhya Pradesh and Maharashtra and others.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How can I volunteer with Jagathi Foundation?<span class="faq-toggle">+</span></div>
+        <div class="faq-answer">You can join our initiatives by signing up through our Join Us page. Opportunities include education programs, health camps, environmental drives, and women empowerment initiatives.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How can I donate to Jagathi Foundation?<span class="faq-toggle">+</span></div>
+        <div class="faq-answer">Individuals and corporates can donate through bank transfer or online via our Get Involved Donations support our programs in education, health, women empowerment, and environmental sustainability.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can corporates partner with Jagathi Foundation?<span class="faq-toggle">+</span></div>
+        <div class="faq-answer">Yes! We collaborate with corporates through CSR partnerships, employee engagement programs, and project sponsorships. Contact us for details at Contact Us.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How are donations used?<span class="faq-toggle">+</span></div>
+        <div class="faq-answer">All donations are directly used for program implementation, including education support, medical camps, livelihood initiatives, environmental activities, and community outreach. Transparency reports are available on request.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How can I stay updated on Jagathi Foundation’s activities?<span class="faq-toggle">+</span></div>
+        <div class="faq-answer">You can follow our News & Updates section, subscribe to newsletters, and follow our social media handles.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Does Jagathi Foundation accept in-kind donations?<span class="faq-toggle">+</span></div>
+        <div class="faq-answer">Yes, we accept contributions like school kits, clothing, food items, and other essentials. Please contact us for specific requirements and logistics.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How can I organize a fundraising event for Jagathi Foundation?<span class="faq-toggle">+</span></div>
+        <div class="faq-answer">Individuals or groups interested in fundraising can reach out through our Contact Us page for guidance and support.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is Jagathi Foundation a registered NGO eligible for tax benefits?<span class="faq-toggle">+</span></div>
+        <div class="faq-answer">Yes, Jagathi Foundation is a registered NGO, and donations may qualify for tax deductions under applicable laws. Receipts are provided for all contributions.</div>
+      </div>
+    </div>
+  </main>
+</body>
+  <script>
+    // FAQ accordion logic
+    document.querySelectorAll('.faq-question').forEach(function(q) {
+      q.addEventListener('click', function() {
+        var item = q.parentElement;
+        var open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+        if (!open) item.classList.add('open');
+      });
+    });
+  </script>
+</html>
