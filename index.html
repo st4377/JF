@@ -521,17 +521,98 @@
       <p class="section-sub" style="margin:0 auto;">A glimpse into our work across communities in India.</p>
     </div>
     <div class="gallery-grid">
-      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/844ff0a5-122e-4527-990f-e98021fd45b3.jpg" alt="Gallery">
-      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_960.webp" alt="Gallery">
-      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_723.webp" alt="Gallery">
-      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_720.webp" alt="Gallery">
-      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1160h_653.webp" alt="Gallery">
-      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_984h_984.webp" alt="Gallery">
-      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_984h_725.webp" alt="Gallery">
-      <img src="https://jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_854.webp" alt="Gallery">
+      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/844ff0a5-122e-4527-990f-e98021fd45b3.jpg" alt="Gallery" onclick="openLightbox(this.src)">
+      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_960.webp" alt="Gallery" onclick="openLightbox(this.src)">
+      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_723.webp" alt="Gallery" onclick="openLightbox(this.src)">
+      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_720.webp" alt="Gallery" onclick="openLightbox(this.src)">
+      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1160h_653.webp" alt="Gallery" onclick="openLightbox(this.src)">
+      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_984h_984.webp" alt="Gallery" onclick="openLightbox(this.src)">
+      <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_984h_725.webp" alt="Gallery" onclick="openLightbox(this.src)">
+      <img src="https://jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_854.webp" alt="Gallery" onclick="openLightbox(this.src)">
     </div>
   </div>
 </section>
+
+<!-- ══════════════ LIGHTBOX ══════════════ -->
+<div id="lightbox" onclick="closeLightbox()" style="
+  display:none; position:fixed; inset:0; z-index:99999;
+  background:rgba(0,0,0,0.92); backdrop-filter:blur(8px);
+  align-items:center; justify-content:center; padding:20px;
+  cursor:zoom-out;
+">
+  <button onclick="closeLightbox()" style="
+    position:absolute; top:20px; right:24px;
+    background:rgba(255,255,255,0.15); border:none; color:white;
+    width:44px; height:44px; border-radius:50%; font-size:1.3rem;
+    cursor:pointer; z-index:2;
+  ">✕</button>
+  <button onclick="prevImage(event)" style="
+    position:absolute; left:20px; top:50%; transform:translateY(-50%);
+    background:rgba(255,255,255,0.15); border:none; color:white;
+    width:48px; height:48px; border-radius:50%; font-size:1.4rem;
+    cursor:pointer; z-index:2;
+  ">‹</button>
+  <img id="lightbox-img" src="" alt="Gallery" style="
+    max-width:90vw; max-height:88vh;
+    border-radius:12px; object-fit:contain;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  " onclick="event.stopPropagation()">
+  <button onclick="nextImage(event)" style="
+    position:absolute; right:20px; top:50%; transform:translateY(-50%);
+    background:rgba(255,255,255,0.15); border:none; color:white;
+    width:48px; height:48px; border-radius:50%; font-size:1.4rem;
+    cursor:pointer; z-index:2;
+  ">›</button>
+</div>
+
+<script>
+  const galleryImages = [
+    'https://www.jagathifoundation.org/wp-content/uploads/2025/10/844ff0a5-122e-4527-990f-e98021fd45b3.jpg',
+    'https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_960.webp',
+    'https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_723.webp',
+    'https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_720.webp',
+    'https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_1160h_653.webp',
+    'https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_984h_984.webp',
+    'https://www.jagathifoundation.org/wp-content/uploads/2025/10/rsw_984h_725.webp',
+    'https://jagathifoundation.org/wp-content/uploads/2025/10/rsw_1280h_854.webp'
+  ];
+  let currentIndex = 0;
+
+  function openLightbox(src) {
+    currentIndex = galleryImages.indexOf(src);
+    document.getElementById('lightbox-img').src = src;
+    const lb = document.getElementById('lightbox');
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function prevImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    document.getElementById('lightbox-img').src = galleryImages[currentIndex];
+  }
+
+  function nextImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    document.getElementById('lightbox-img').src = galleryImages[currentIndex];
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    const lb = document.getElementById('lightbox');
+    if (lb.style.display === 'flex') {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft')  prevImage(e);
+      if (e.key === 'ArrowRight') nextImage(e);
+    }
+  });
+</script>
 
 <!-- ══════════════ PROGRAMS ══════════════ -->
 <section class="programs-section" id="programs">
@@ -617,33 +698,72 @@
     </div>
     <div class="leadership-grid">
       <div class="leader-card">
-        <div class="leader-avatar">
-          <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/1-1.png" alt="Durga Kalyani – President">
-        </div>
-        <div class="leader-role">President</div>
-        <div class="leader-name">Durga Kalyani</div>
-      </div>
-      <div class="leader-card">
-        <div class="leader-avatar">
-          <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/2.png" alt="Abou Baker – Vice President">
-        </div>
-        <div class="leader-role">Vice President</div>
-        <div class="leader-name">Abou Baker</div>
-      </div>
-      <div class="leader-card">
-        <div class="leader-avatar">
-          <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/4.png" alt="Ramachandra Murthy – Joint Secretary">
-        </div>
-        <div class="leader-role">Joint Secretary</div>
-        <div class="leader-name">Ramachandra Murthy (RC)</div>
-      </div>
-      <div class="leader-card">
-        <div class="leader-avatar">
-          <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/raja-e1760028754142.png" alt="Raja Ratna – Executive Board Member">
-        </div>
-        <div class="leader-role">Executive Board Member</div>
-        <div class="leader-name">Raja Ratna</div>
-      </div>
+  <div class="leader-avatar">
+    <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/1-1.png" alt="Durga Kalyani – President">
+  </div>
+  <div class="leader-role">President</div>
+  <div class="leader-name">Durga Kalyani</div>
+  <a href="https://www.linkedin.com/in/durga-kalyani-917a791a/ " target="_blank" style="
+    display:inline-flex;align-items:center;gap:6px;
+    margin-top:14px;padding:7px 16px;border-radius:8px;
+    background:#0077b5;color:white;font-size:0.78rem;
+    font-weight:600;text-decoration:none;transition:background 0.2s;
+  " onmouseover="this.style.background='#005f8e'" onmouseout="this.style.background='#0077b5'">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    LinkedIn
+  </a>
+</div>
+
+<div class="leader-card">
+  <div class="leader-avatar">
+    <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/2.png" alt="Abou Baker – Vice President">
+  </div>
+  <div class="leader-role">Vice President</div>
+  <div class="leader-name">Abou Baker</div>
+  <a href="https://www.linkedin.com/in/abou-baker-854b853/ " target="_blank" style="
+    display:inline-flex;align-items:center;gap:6px;
+    margin-top:14px;padding:7px 16px;border-radius:8px;
+    background:#0077b5;color:white;font-size:0.78rem;
+    font-weight:600;text-decoration:none;transition:background 0.2s;
+  " onmouseover="this.style.background='#005f8e'" onmouseout="this.style.background='#0077b5'">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    LinkedIn
+  </a>
+</div>
+
+<div class="leader-card">
+  <div class="leader-avatar">
+    <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/4.png" alt="Ramachandra Murthy – Joint Secretary">
+  </div>
+  <div class="leader-role">Joint Secretary</div>
+  <div class="leader-name">Ramachandra Murthy (RC)</div>
+  <a href="https://www.linkedin.com/in/ramachandra-murthy" target="_blank" style="
+    display:inline-flex;align-items:center;gap:6px;
+    margin-top:14px;padding:7px 16px;border-radius:8px;
+    background:#0077b5;color:white;font-size:0.78rem;
+    font-weight:600;text-decoration:none;transition:background 0.2s;
+  " onmouseover="this.style.background='#005f8e'" onmouseout="this.style.background='#0077b5'">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    LinkedIn
+  </a>
+</div>
+
+<div class="leader-card">
+  <div class="leader-avatar">
+    <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/raja-e1760028754142.png" alt="Raja Ratna – Executive Board Member">
+  </div>
+  <div class="leader-role">Executive Board Member</div>
+  <div class="leader-name">Raja Ratna</div>
+  <a href="https://www.linkedin.com/in/raja-ratna" target="_blank" style="
+    display:inline-flex;align-items:center;gap:6px;
+    margin-top:14px;padding:7px 16px;border-radius:8px;
+    background:#0077b5;color:white;font-size:0.78rem;
+    font-weight:600;text-decoration:none;transition:background 0.2s;
+  " onmouseover="this.style.background='#005f8e'" onmouseout="this.style.background='#0077b5'">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    LinkedIn
+  </a>
+</div>
     </div>
     <p style="text-align:center;margin-top:40px;color:var(--muted);font-size:0.9rem;">Together, we're building a stronger, healthier, and more inclusive society.</p>
   </div>
@@ -825,12 +945,21 @@
         Supporter Care: <a href="mailto:info@jagathifoundation.org" style="color:rgba(255,255,255,0.6);">info@jagathifoundation.org</a>
       </p>
       <div class="footer-social" style="margin-top:16px;">
-        <a href="https://www.facebook.com/people/Jagathi-Foundation/100068318404425/" class="social-btn" target="_blank" title="Facebook">f</a>
-        <a href="https://x.com/jagathi_NGO?s=08" class="social-btn" target="_blank" title="Twitter">𝕏</a>
-        <a href="https://www.youtube.com/@jagathifoundation" class="social-btn" target="_blank" title="YouTube">▶</a>
-        <a href="https://www.instagram.com/jagathifoundation/" class="social-btn" target="_blank" title="Instagram">📸</a>
-        <a href="https://www.linkedin.com/company/jagathi-foundation/" class="social-btn" target="_blank" title="LinkedIn">in</a>
-      </div>
+       <a href="https://www.facebook.com/people/Jagathi-Foundation/100068318404425/" class="social-btn" target="_blank" title="Facebook">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+</a>
+<a href="https://x.com/jagathi_NGO?s=08" class="social-btn" target="_blank" title="X / Twitter">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+</a>
+<a href="https://www.youtube.com/@jagathifoundation" class="social-btn" target="_blank" title="YouTube">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a7a8a"/></svg>
+</a>
+<a href="https://www.instagram.com/jagathifoundation/" class="social-btn" target="_blank" title="Instagram">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+</a>
+<a href="https://www.linkedin.com/company/jagathi-foundation/" class="social-btn" target="_blank" title="LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+</a> </div>
     </div>
 
     <div class="footer-col">
