@@ -244,7 +244,7 @@
   border-color: var(--teal-light);
 }
 .leader-avatar {
-  width: 110px; height: 110px;
+  width: 180px; height: 180px;
   border-radius: 50%;
   margin: 0 auto 16px;
   background: linear-gradient(135deg, var(--teal) 0%, var(--teal-light) 100%);

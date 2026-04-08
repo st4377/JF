@@ -69,54 +69,65 @@
   max-width: 560px;
 }
 
-/* ── HERO IMAGE ── */
+/* ── HERO IMAGE COLUMN ── */
+/* The hero image is now handled as a full-height column.
+   .hero-image-col and .hero-main-img are styled in layout.css.
+   The wrapper/badge below are kept for any legacy use. */
+
 .hero-image-wrapper {
   position: relative;
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  min-width: 350px;
-  min-height: 350px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .hero-image {
-  width: 95%;
-  max-width: 540px;
-  border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  box-shadow: none;
   object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
+/* Badge logo in top-right corner of image */
 .hero-badge-img {
   position: absolute;
-  top: 18px;
-  right: 28px;
-  width: 120px;
-  transform: rotate(7deg);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  top: 16px;
+  right: 16px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
   background: #fff;
-  border-radius: 8px;
+  object-fit: contain;
   padding: 4px;
+  transform: none;
+  z-index: 5;
 }
 
 @media (max-width: 900px) {
-  .hero-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .hero-image-wrapper {
-    margin-top: 32px;
-    min-width: 220px;
-    min-height: 220px;
-  }
-  .hero-image {
-    width: 100%;
-    max-width: 340px;
-  }
   .hero-badge-img {
     width: 70px;
+    height: 70px;
+    top: 10px;
+    right: 10px;
+    border-width: 3px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-badge-img {
+    width: 52px;
+    height: 52px;
     top: 8px;
-    right: 12px;
+    right: 8px;
+    border-width: 2px;
   }
 }
