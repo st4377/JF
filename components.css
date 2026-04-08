@@ -1,0 +1,122 @@
+/* ═══════════════════════════════════════
+   JAGATHI FOUNDATION – Reusable Components
+   ═══════════════════════════════════════ */
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.22s;
+  letter-spacing: 0.02em;
+}
+
+.btn-outline {
+  border: 1.5px solid var(--teal);
+  color: var(--teal);
+  background: transparent;
+}
+.btn-outline:hover { background: var(--teal); color: var(--white); }
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--dark);
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(232, 160, 32, 0.4);
+}
+
+.btn-lg    { padding: 14px 32px; font-size: 1rem; border-radius: 10px; }
+.btn-white { background: var(--white); color: var(--teal); }
+.btn-white:hover { background: var(--cream); transform: translateY(-1px); }
+
+/* ── SECTION LABELS ── */
+.section-tag {
+  display: inline-block;
+  background: rgba(13, 79, 92, 0.08);
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--dark);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+/* ── HERO IMAGE ── */
+.hero-image-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 350px;
+  min-height: 350px;
+}
+
+.hero-image {
+  width: 95%;
+  max-width: 540px;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  object-fit: cover;
+}
+
+.hero-badge-img {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  width: 120px;
+  transform: rotate(7deg);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-image-wrapper {
+    margin-top: 32px;
+    min-width: 220px;
+    min-height: 220px;
+  }
+  .hero-image {
+    width: 100%;
+    max-width: 340px;
+  }
+  .hero-badge-img {
+    width: 70px;
+    top: 8px;
+    right: 12px;
+  }
+}

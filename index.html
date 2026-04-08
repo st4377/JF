@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jagathi Foundation – Changing Childhoods. Changing Lives.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- ── CSS Modules ── -->
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="sections.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+<!-- ══════════════ TOP BAR ══════════════ -->
+<div class="topbar">
+  <span> Changing childhoods. Changing lives.</span>
+  <span>✉️ <a href="mailto:info@jagathifoundation.org">info@jagathifoundation.org</a>
+    &nbsp;|&nbsp; Mon–Sun: 10 AM – 5 PM IST</span>
+</div>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <img
+      src="https://jagathifoundation.org/wp-content/uploads/2025/10/cropped-jaga-630x120-1-1.png"
+      alt="Jagathi Foundation"
+      onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-family:Playfair Display,serif;font-size:1.1rem;font-weight:700;color:var(--teal);\'>Jagathi Foundation</span>')"
+    >
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-ctas">
+    <a href="#contact" class="btn btn-outline">Get Help →</a>
+    <a href="#donate"  class="btn btn-primary">Donate →</a>
+  </div>
+
+  <div class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════════════ MOBILE MENU ══════════════ -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" aria-label="Close menu">✕</button>
+  <a href="#about">About Us</a>
+  <a href="#programs">Programs</a>
+  <a href="#leadership">Leadership</a>
+  <a href="#impact">Impact</a>
+  <a href="#donate">Donate</a>
+  <a href="#contact">Contact</a>
+  <a href="#donate" class="btn btn-primary btn-lg" style="margin-top:20px;justify-content:center;">Donate Now →</a>
+</div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="home" class="hero">
+  <div class="hero-blob"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">⭐ Est. 8th October 2020 · 8 States · India</div>
+      <h1>WE OFFER <span>HOPE</span><br>YOU CAN<br>HELP</h1>
+      <p>Jagathi Foundation is a registered NGO committed to transforming communities through education, women's empowerment, healthcare, and sustainable development across India.</p>
+      <div class="hero-btns">
+        <a href="#donate" class="btn btn-primary btn-lg">Donate Now →</a>
+        <a href="#about"  class="btn btn-lg" style="border:1.5px solid rgba(255,255,255,0.35);color:white;background:transparent;">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">8</div>
+          <div class="hero-stat-label">States Active</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">5+</div>
+          <div class="hero-stat-label">Years Impact</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">1000s</div>
+          <div class="hero-stat-label">Lives Changed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New: Hero image with badge overlay -->
+    <div class="hero-image-wrapper">
+      <img src="images/rsw_1280h_854 (1).webp" alt="Jagathi Foundation Award Ceremony" class="hero-image">
+      <img src="images/badge.png" alt="Badge" class="hero-badge-img">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ IMPACT BAND ══════════════ -->
+<div class="impact-band" id="impact">
+  <div class="impact-grid">
+    <div><div class="impact-num">5000+</div><div class="impact-label">Individuals Benefited</div></div>
+    <div><div class="impact-num">1000+</div><div class="impact-label">Volunteers</div></div>
+    <div><div class="impact-num">35</div>   <div class="impact-label">Projects Executed</div></div>
+    <div><div class="impact-num">25</div>   <div class="impact-label">Corporate Partners</div></div>
+  </div>
+</div>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Image column (hidden on mobile) -->
+      <div class="about-img-wrapper">
+        <div class="about-img-bg">
+          <span style="position:relative;z-index:1;">🌍</span>
+          <div style="position:absolute;bottom:24px;left:24px;z-index:2;color:white;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;line-height:1;">Jagathi Foundation</div>
+            <div style="font-size:0.8rem;opacity:0.7;">Registered Non-Profit NGO</div>
+          </div>
+        </div>
+        <div class="about-badge-float">
+          <strong>2020</strong>
+          <span>Founded</span>
+        </div>
+      </div>
+
+      <!-- Text column -->
+      <div>
+        <div class="section-tag">Who We Are</div>
+        <h2 class="section-title">A Worldwide Non-Profit Charity</h2>
+        <p class="section-sub">Jagathi Foundation is a registered non-profit organization founded on 8th October 2020 with a mission to empower underserved communities through education, health awareness, women empowerment, environmental action, and sustainable livelihoods.</p>
+        <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;margin-top:16px;">We operate across eight states in India, focusing on grassroots change and long-term impact. Working closely with volunteers, corporates, government bodies, and partner institutions, we implement impactful programs that uplift communities and inspire social responsibility.</p>
+
+        <div class="about-values">
+          <div class="value-row">
+            <div class="value-icon">🤝</div>
+            <div class="value-text">
+              <h4>Community Empowerment</h4>
+              <p>Dedicated services and advocacy efforts to empower communities through sustainable initiatives.</p>
+            </div>
+          </div>
+          <div class="value-row">
+            <div class="value-icon">💎</div>
+            <div class="value-text">
+              <h4>Core Values Foundation</h4>
+              <p>Integrity, inclusivity, and compassion are fundamental values guiding all organizational actions.</p>
+            </div>
+          </div>
+          <div class="value-row">
+            <div class="value-icon">🔍</div>
+            <div class="value-text">
+              <h4>Transparent Process</h4>
+              <p>Operate with complete transparency, credibility and process accuracy in all we do.</p>
+            </div>
+          </div>
+          <div class="value-row">
+            <div class="value-icon">💻</div>
+            <div class="value-text">
+              <h4>Technology Leverage</h4>
+              <p>Leveraging technologies for faster efficiency and audit governance across all programs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROGRAMS ══════════════ -->
+<section class="programs-section" id="programs">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto;">
+      <div class="section-tag">Our Initiatives</div>
+      <h2 class="section-title">Programs That Create Lasting Change</h2>
+      <p class="section-sub" style="margin:0 auto;">Across eight states in India, our programs target the most urgent needs of underserved communities.</p>
+    </div>
+
+    <div class="programs-grid">
+      <div class="program-card">
+        <div class="program-icon">📚</div>
+        <h3>Education &amp; Skill Development</h3>
+        <p>Providing quality education, digital literacy, and vocational training to children and youth in underserved areas, creating pathways to sustainable futures.</p>
+        <a href="#contact" class="program-link">Learn More →</a>
+      </div>
+      <div class="program-card">
+        <div class="program-icon">🏥</div>
+        <h3>Health Awareness &amp; Wellness</h3>
+        <p>Conducting health camps, awareness drives, and preventive healthcare initiatives to improve community wellbeing and reduce health disparities.</p>
+        <a href="#contact" class="program-link">Learn More →</a>
+      </div>
+      <div class="program-card">
+        <div class="program-icon">👩</div>
+        <h3>Women Empowerment &amp; Livelihood</h3>
+        <p>Supporting women through skill training, entrepreneurship programs, and advocacy efforts that promote financial independence and social equity.</p>
+        <a href="#contact" class="program-link">Learn More →</a>
+      </div>
+      <div class="program-card">
+        <div class="program-icon">🌿</div>
+        <h3>Environmental Sustainability</h3>
+        <p>Driving climate action through tree plantation drives, waste management awareness, and sustainable agriculture training in rural communities.</p>
+        <a href="#contact" class="program-link">Learn More →</a>
+      </div>
+      <div class="program-card">
+        <div class="program-icon">🏘️</div>
+        <h3>Community Development</h3>
+        <p>Building resilient communities through social welfare programs, infrastructure support, and inclusive development initiatives at the grassroots level.</p>
+        <a href="#contact" class="program-link">Learn More →</a>
+      </div>
+      <div class="program-card" style="background:var(--teal);color:white;border-color:var(--teal);">
+        <div class="program-icon" style="background:rgba(255,255,255,0.15);">🤝</div>
+        <h3 style="color:white;">Collaborate With Us</h3>
+        <p style="color:rgba(255,255,255,0.75);">Corporates, government bodies, and community leaders — join us in shaping a stronger, healthier, and more inclusive nation.</p>
+        <a href="#contact" class="program-link" style="color:var(--gold-light);">Get In Touch →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ AMRUT AAHAR HIGHLIGHT ══════════════ -->
+<div class="highlight-section">
+  <div class="highlight-inner">
+    <div>
+      <div class="highlight-label">Flagship Program</div>
+      <h2 class="highlight-title">AMRUT<br><span>AAHAR</span></h2>
+      <p class="highlight-desc">An effective nutrition program defined and designed by Jagathi Foundation. The program's main objective is to provide nutrition to underprivileged children on a timely and periodical basis — ensuring every child gets the nourishment they deserve.</p>
+      <a href="#donate" class="btn btn-primary btn-lg">Support This Program →</a>
+    </div>
+    <div class="highlight-visual">
+      <div class="hl-visual-title">🏫 Active Locations</div>
+      <div class="hl-locations">
+        <div class="hl-loc"><div class="hl-loc-dot"></div>Government UPS School – Bandam Kommu, Hyderabad, Telangana</div>
+        <div class="hl-loc"><div class="hl-loc-dot"></div>Government Schools across 8 States</div>
+        <div class="hl-loc"><div class="hl-loc-dot"></div>Rural Community Centers</div>
+        <div class="hl-loc"><div class="hl-loc-dot"></div>Anganwadi Centers</div>
+      </div>
+      <div style="margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.15);">
+        <div class="hl-visual-title">🏆 Recognition</div>
+        <p style="color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.6;">Launched and recognised by VG Nagane. Appreciated by Dr. Temkubar Kaushikanyan for commitment to society.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ LEADERSHIP ══════════════ -->
+<section class="leadership-section" id="leadership">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto;">
+      <div class="section-tag">Our Volunteers</div>
+      <h2 class="section-title">The Organisation Is Led By</h2>
+      <p class="section-sub" style="margin:0 auto;">Jagathi Foundation works closely with volunteers, corporates, government bodies, and partner institutions to implement impactful programs.</p>
+    </div>
+
+    <div class="leadership-grid">
+      <div class="leader-card">
+        <div class="leader-avatar">
+          <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/1-1.png" alt="Durga Kalyani – President">
+        </div>
+        <div class="leader-role">President</div>
+        <div class="leader-name">Durga Kalyani</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">
+          <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/2.png" alt="Abou Baker – Vice President">
+        </div>
+        <div class="leader-role">Vice President</div>
+        <div class="leader-name">Abou Baker</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">
+          <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/4.png" alt="Ramachandra Murthy – Joint Secretary">
+        </div>
+        <div class="leader-role">Joint Secretary</div>
+        <div class="leader-name">Ramachandra Murthy (RC)</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-avatar">
+          <img src="https://www.jagathifoundation.org/wp-content/uploads/2025/10/raja-e1760028754142.png" alt="Raja Ratna – Executive Board Member">
+        </div>
+        <div class="leader-role">Executive Board Member</div>
+        <div class="leader-name">Raja Ratna</div>
+      </div>
+    </div>
+
+    <p style="text-align:center;margin-top:40px;color:var(--muted);font-size:0.9rem;">Together, we're building a stronger, healthier, and more inclusive society.</p>
+  </div>
+</section>
+
+<!-- ══════════════ TEJASWINI ══════════════ -->
+<div class="tejaswini-section">
+  <div class="tejaswini-inner">
+    <div>
+      <div class="tejaswini-badge">CSR Initiative</div>
+      <h2 class="tejaswini-title">CARING FOR<br>THE PRECIOUS<br>GEMS OF<br><em>TOMORROW</em></h2>
+      <p class="tejaswini-desc">Presenting <strong style="color:white;">TEJASWINI</strong> — a transformative CSR initiative empowering young girls with education, health, and life skills. Join us in creating a generation of confident, capable, and empowered women.</p>
+      <a href="#contact" class="btn btn-white btn-lg">Partner With Us →</a>
+    </div>
+    <div class="tejaswini-visual">
+      <div class="tej-card">
+        <div class="tej-card-icon">🎓</div>
+        <h4>Education Access</h4>
+        <p>Scholarships and mentorship for underprivileged girls to access quality education.</p>
+      </div>
+      <div class="tej-card">
+        <div class="tej-card-icon">💪</div>
+        <h4>Life Skills</h4>
+        <p>Training programs in confidence, communication, and career readiness.</p>
+      </div>
+      <div class="tej-card">
+        <div class="tej-card-icon">🏥</div>
+        <h4>Health &amp; Hygiene</h4>
+        <p>Comprehensive health awareness and menstrual hygiene programs.</p>
+      </div>
+      <div class="tej-card">
+        <div class="tej-card-icon">🌟</div>
+        <h4>Leadership</h4>
+        <p>Nurturing future women leaders through community and civic engagement.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ DONATE ══════════════ -->
+<section class="donate-section" id="donate">
+  <div class="container">
+    <div class="section-tag">Support Us</div>
+    <h2 class="section-title">Got More Than Needed?<br>Donate and Bring a Smile</h2>
+    <p class="section-sub">Your generous contributions empower Jagathi Foundation to uplift underserved communities across India. Whether you're an individual or a corporate entity, there are meaningful ways to support our mission.</p>
+
+    <div class="donate-grid">
+      <!-- Bank Transfer -->
+      <div class="donate-card">
+        <h3>🏦 Bank Transfer</h3>
+        <div class="bank-field"><label>Account Name</label><value>Jagathi Foundation</value></div>
+        <div class="bank-field"><label>Bank</label><value>DBS Bank</value></div>
+        <div class="bank-field"><label>Account Number</label><value>0612387000000040</value></div>
+        <div class="bank-field"><label>IFSC Code</label><value>DBSS0IN0612</value></div>
+        <div class="bank-note">📋 Please retain the transaction receipt for tax purposes.</div>
+      </div>
+
+      <!-- Corporate -->
+      <div class="donate-card">
+        <h3>🤝 Corporate Contributions</h3>
+        <div class="csr-item">
+          <div class="csr-icon">🏢</div>
+          <div>
+            <h4>CSR Partnerships</h4>
+            <p>Align your corporate social responsibility initiatives with Jagathi Foundation's programs to create lasting social impact.</p>
+          </div>
+        </div>
+        <div class="csr-item">
+          <div class="csr-icon">👥</div>
+          <div>
+            <h4>Employee Engagement</h4>
+            <p>Encourage employee participation through volunteering, fundraising, and matching gift programs.</p>
+          </div>
+        </div>
+        <div class="csr-item">
+          <div class="csr-icon">🌱</div>
+          <div>
+            <h4>Program Sponsorships</h4>
+            <p>Directly sponsor key programs like Amrut Aahar, Tejaswini, or education initiatives for maximum impact.</p>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:16px;">Get in Touch →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">We'd Love to Hear From You</h2>
+    <p class="section-sub">Reach out for donations, volunteering, partnerships, or to learn more about our work.</p>
+
+    <div class="contact-grid">
+      <!-- Info cards -->
+      <div>
+        <div class="contact-info-cards">
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📍</div>
+            <div><h4>Headquarter</h4><p>Chandanagar, Hyderabad,<br>Telangana, India</p></div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">✉️</div>
+            <div><h4>Email Us</h4><p><a href="mailto:info@jagathifoundation.org" style="color:var(--teal);text-decoration:none;">info@jagathifoundation.org</a></p></div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">🕐</div>
+            <div><h4>Visiting Hours</h4><p>Monday to Sunday: 10:00 AM – 5:00 PM IST</p></div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">💬</div>
+            <div><h4>WhatsApp</h4><p>Message us directly via WhatsApp for quick assistance</p></div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon">🙋</div>
+            <div><h4>Volunteer With Us</h4><p>Interested in giving back to society? Join us as a volunteer by submitting your details.</p></div>
+          </div>
+        </div>
+
+        <!-- Google Maps -->
+        <div style="margin-top:24px;border-radius:16px;overflow:hidden;border:1px solid var(--border);position:relative;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2!2d78.3310!3d17.4950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc673f5555%3A0x78b458cd32b9b0c4!2sJagathi%20Foundation!5e0!3m2!1sen!2sin!4v1710500000000!5m2!1sen!2sin"
+            width="100%" height="240" style="border:0;display:block;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Jagathi Foundation – Chandanagar, Hyderabad">
+          </iframe>
+          <a href="https://www.google.com/maps/search/Jagathi+Foundation+Chandanagar+Hyderabad+Telangana+India"
+            target="_blank" rel="noopener noreferrer"
+            style="position:absolute;bottom:12px;right:12px;background:var(--teal);color:white;padding:8px 16px;border-radius:8px;font-size:0.8rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;box-shadow:0 4px 14px rgba(0,0,0,0.25);">
+            🗺️ Open in Google Maps →
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+91 ...">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject">
+                <option value="">Select a subject</option>
+                <option>Donate / Support</option>
+                <option>Volunteer</option>
+                <option>CSR Partnership</option>
+                <option>Media / Press</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" placeholder="Tell us how you'd like to get involved or any questions you have..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Send Message →</button>
+          <p id="form-success" style="display:none;text-align:center;color:green;font-weight:600;margin-top:10px;">✅ Message sent! We'll be in touch soon.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <img
+          src="https://jagathifoundation.org/wp-content/uploads/2025/10/cropped-jaga-630x120-1-1.png"
+          alt="Jagathi Foundation"
+          style="height:56px;width:auto;object-fit:contain;border-radius:8px;"
+        >
+      </div>
+      <p>A registered non-profit organisation committed to uplifting underprivileged and vulnerable communities across India since 2020.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn" title="Facebook">f</a>
+        <a href="#" class="social-btn" title="Twitter">𝕏</a>
+        <a href="#" class="social-btn" title="Instagram">📸</a>
+        <a href="#" class="social-btn" title="YouTube">▶</a>
+        <a href="#" class="social-btn" title="LinkedIn">in</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#programs">Highlights</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="#donate">Donate Now</a></li>
+        <li><a href="#contact">Volunteer</a></li>
+        <li><a href="#contact">FAQ</a></li>
+        <li><a href="#contact">CSR Partnership</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="mailto:info@jagathifoundation.org">Email Us</a></li>
+        <li><a href="#about">Our Mission</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Jagathi Foundation. All Rights Reserved.</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms &amp; Conditions</a></span>
+  </div>
+</footer>
+
+<!-- ══════════════ DONATE MODAL ══════════════ -->
+<div id="donateModal" style="
+  display:none;position:fixed;inset:0;z-index:9999;
+  background:rgba(10,26,30,0.75);backdrop-filter:blur(6px);
+  align-items:center;justify-content:center;padding:20px;
+">
+  <div style="
+    background:#fff;border-radius:24px;max-width:620px;width:100%;
+    max-height:90vh;overflow-y:auto;
+    box-shadow:0 30px 80px rgba(0,0,0,0.3);
+    position:relative;animation:modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1) both;
+  ">
+    <!-- Header -->
+    <div style="background:linear-gradient(135deg,#0d4f5c 0%,#1a7a8a 100%);padding:32px 36px 28px;border-radius:24px 24px 0 0;position:relative;">
+      <button onclick="closeDonateModal()" style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.15);border:none;color:white;width:36px;height:36px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">✕</button>
+      <div style="font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:6px;font-weight:700;">Everyone Has Something to Contribute</div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:white;line-height:1;margin-bottom:6px;">GOT MORE THAN NEEDED?</h2>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#f5c842;line-height:1;">DONATE AND BRING A SMILE</h3>
+      <p style="color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.6;margin-top:12px;">Your generous contributions empower Jagathi Foundation to uplift underserved communities across India. Whether you're an individual or a corporate entity, there are meaningful ways to support our mission.</p>
+    </div>
+
+    <!-- Body -->
+    <div style="padding:32px 36px;">
+      <!-- Tab switcher -->
+      <div style="display:flex;gap:8px;margin-bottom:28px;background:#f5f5f0;border-radius:12px;padding:4px;">
+        <button id="tab-individual" onclick="switchTab('individual')" style="flex:1;padding:10px;border:none;border-radius:10px;background:#0d4f5c;color:white;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.2s;">💳 Individual Donation</button>
+        <button id="tab-corporate" onclick="switchTab('corporate')" style="flex:1;padding:10px;border:none;border-radius:10px;background:transparent;color:#5a7a82;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.2s;">🏢 Corporate / CSR</button>
+      </div>
+
+      <!-- Individual tab panel -->
+      <div id="panel-individual">
+        <div style="background:#faf7f2;border:1px solid rgba(13,79,92,0.12);border-radius:16px;padding:28px;margin-bottom:20px;">
+          <h3 style="font-size:1.15rem;font-weight:700;color:#0a1a1e;margin-bottom:20px;display:flex;align-items:center;gap:8px;">🏦 Bank Transfer</h3>
+          <table style="width:100%;border-collapse:collapse;">
+            <tr style="border-bottom:1px solid rgba(13,79,92,0.08);">
+              <td style="padding:10px 0;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#5a7a82;width:40%;">Account Name</td>
+              <td style="padding:10px 0;font-size:1rem;font-weight:700;color:#0a1a1e;">Jagathi Foundation</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(13,79,92,0.08);">
+              <td style="padding:10px 0;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#5a7a82;">Bank</td>
+              <td style="padding:10px 0;font-size:1rem;font-weight:700;color:#0a1a1e;">DBS Bank</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(13,79,92,0.08);">
+              <td style="padding:10px 0;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#5a7a82;">Account No.</td>
+              <td style="padding:10px 0;font-size:1rem;font-weight:700;color:#0a1a1e;display:flex;align-items:center;gap:10px;">
+                0612387000000040
+                <button onclick="copyText('0612387000000040', this)" style="background:rgba(13,79,92,0.08);border:none;color:#0d4f5c;padding:4px 10px;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;">Copy</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:10px 0;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#5a7a82;">IFSC Code</td>
+              <td style="padding:10px 0;font-size:1rem;font-weight:700;color:#0a1a1e;display:flex;align-items:center;gap:10px;">
+                DBSS0IN0612
+                <button onclick="copyText('DBSS0IN0612', this)" style="background:rgba(13,79,92,0.08);border:none;color:#0d4f5c;padding:4px 10px;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;">Copy</button>
+              </td>
+            </tr>
+          </table>
+          <div style="margin-top:16px;padding:12px 16px;background:rgba(13,79,92,0.05);border-left:3px solid #0d4f5c;border-radius:4px;font-size:0.8rem;color:#5a7a82;">📋 Please retain the transaction receipt for tax purposes.</div>
+        </div>
+        <p style="text-align:center;font-size:0.82rem;color:#5a7a82;line-height:1.6;">Your support helps us drive change in education, health, women empowerment, and environmental sustainability.</p>
+      </div>
+
+      <!-- Corporate tab panel -->
+      <div id="panel-corporate" style="display:none;">
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="padding:20px;border-radius:14px;border:1px solid rgba(13,79,92,0.12);display:flex;gap:14px;align-items:flex-start;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(13,79,92,0.08);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🤝</div>
+            <div><h4 style="font-weight:700;font-size:0.95rem;margin-bottom:4px;">CSR Partnerships</h4><p style="font-size:0.85rem;color:#5a7a82;line-height:1.6;">Align your corporate social responsibility initiatives with Jagathi Foundation's programs to create lasting social impact.</p></div>
+          </div>
+          <div style="padding:20px;border-radius:14px;border:1px solid rgba(13,79,92,0.12);display:flex;gap:14px;align-items:flex-start;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(13,79,92,0.08);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">👥</div>
+            <div><h4 style="font-weight:700;font-size:0.95rem;margin-bottom:4px;">Employee Engagement</h4><p style="font-size:0.85rem;color:#5a7a82;line-height:1.6;">Encourage employee participation through volunteering, fundraising, and matching gift programs.</p></div>
+          </div>
+          <div style="padding:20px;border-radius:14px;border:1px solid rgba(13,79,92,0.12);display:flex;gap:14px;align-items:flex-start;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(13,79,92,0.08);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🌱</div>
+            <div><h4 style="font-weight:700;font-size:0.95rem;margin-bottom:4px;">Program Sponsorships</h4><p style="font-size:0.85rem;color:#5a7a82;line-height:1.6;">Directly sponsor key programs like Amrut Aahar or Tejaswini for maximum visible impact.</p></div>
+          </div>
+          <a href="#contact" onclick="closeDonateModal()" style="display:block;text-align:center;background:#e8a020;color:#0a1a1e;padding:14px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;margin-top:4px;">📧 Contact Us for CSR Partnership →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ JS Modules ══════════════ -->
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

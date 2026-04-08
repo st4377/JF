@@ -1,0 +1,16 @@
+/* ═══════════════════════════════════════
+   JAGATHI FOUNDATION – CSS Variables
+   ═══════════════════════════════════════ */
+
+:root {
+  --teal:       #0d4f5c;
+  --teal-light: #1a7a8a;
+  --gold:       #e8a020;
+  --gold-light: #f5c842;
+  --cream:      #faf7f2;
+  --dark:       #0a1a1e;
+  --white:      #ffffff;
+  --text:       #1c2b30;
+  --muted:      #5a7a82;
+  --border:     rgba(13, 79, 92, 0.12);
+}

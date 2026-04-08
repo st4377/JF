@@ -1,0 +1,30 @@
+/* ═══════════════════════════════════════
+   JAGATHI FOUNDATION – Base & Reset
+   ═══════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ── SECTION COMMON ── */
+section {
+  padding: 100px 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

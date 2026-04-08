@@ -1,0 +1,36 @@
+/* ═══════════════════════════════════════
+   JAGATHI FOUNDATION – Responsive
+   ═══════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .hero-inner          { grid-template-columns: 1fr; }
+  .hero-card-stack     { display: none; }
+  .about-grid          { grid-template-columns: 1fr; }
+  .about-img-wrapper   { display: none; }
+  .programs-grid       { grid-template-columns: 1fr 1fr; }
+  .leadership-grid     { grid-template-columns: 1fr 1fr; }
+  .impact-grid         { grid-template-columns: repeat(2, 1fr); }
+  .highlight-inner,
+  .tejaswini-inner     { grid-template-columns: 1fr; }
+  .donate-grid         { grid-template-columns: 1fr; }
+  .contact-grid        { grid-template-columns: 1fr; }
+  .footer-grid         { grid-template-columns: 1fr 1fr; }
+  .nav-links           { display: none; }
+  .hamburger           { display: flex; }
+}
+
+@media (max-width: 640px) {
+  section              { padding: 60px 20px; }
+  nav                  { padding: 0 20px; }
+  .topbar              { padding: 6px 20px; font-size: 0.7rem; }
+  .programs-grid       { grid-template-columns: 1fr; }
+  .impact-grid         { grid-template-columns: 1fr 1fr; }
+  .leadership-grid     { grid-template-columns: 1fr 1fr; }
+  .footer-grid         { grid-template-columns: 1fr; }
+  .form-row            { grid-template-columns: 1fr; }
+  .hero-inner          { padding: 0 20px; }
+  .hero-stats          { grid-template-columns: 1fr 1fr; }
+  .tejaswini-visual    { grid-template-columns: 1fr; }
+  .footer-bottom       { flex-direction: column; gap: 10px; text-align: center; }
+  .nav-logo img        { height: 40px; }
+}
